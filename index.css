@@ -7,39 +7,54 @@
 #container {
     background-color: black;
     position: fixed;
-    top: 10%;
+    top: 5%;
     left: 35%;
-    width: 350px;
-    height: 600px;
-    font-size: 2rem;
+    width: 375px;
+    height: 630px;
     font-family:Arial, Helvetica, sans-serif ;
     padding: 25px;
 }
+.result1 {  
+   
+    height: 60px;
+    color: white;
+    font-size: 3rem;
+    text-align: right;
+    padding-right: 5px;
+}
 
-.result {
-    height: 200px;
+.result2 {
+   
+    height: 100px;
     color: white;
     font-size: 6rem;
     text-align: right;
-}
-p {
-
-    padding: 70px 10px 0 0;
+    margin-bottom: 20px;
+    padding-right: 5px;
 }
     
-span {
+button {
     text-align: center;
     color: white;
-    background-color: grey;
+    background-color: rgb(156, 156, 156);
     margin: 5px;
-    width: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: inline-block;
-    padding: 1.1rem 0;
+    padding: 1.1;
+    font-size: 2.2rem;
+    border: none;
+}
+button:hover{opacity: 0.5;
+
+}
+.button{
+    background-color: rgb(80, 80, 80);
 }
 
 .double {
-    width: 135px;
+    width: 175px;
     border-radius: 40px;
     text-align: left;
     padding-left: 25px;
