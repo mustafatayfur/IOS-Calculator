@@ -1,46 +1,56 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid white; */
 }
 
 #container {
     background-color: black;
     position: fixed;
-    top: 20%;
+    top: 10%;
     left: 35%;
-    width: 400px;
-    height: 800px;
+    width: 350px;
+    height: 600px;
+    font-size: 2rem;
+    font-family:Arial, Helvetica, sans-serif ;
+    padding: 25px;
 }
 
 .result {
     height: 200px;
+    color: white;
+    font-size: 6rem;
+    text-align: right;
 }
+p {
 
+    padding: 70px 10px 0 0;
+}
+    
 span {
-
     text-align: center;
     color: white;
     background-color: grey;
     margin: 5px;
-    width: 80px;
+    width: 70px;
     border-radius: 50%;
     display: inline-block;
-    padding: 1.5rem 0;
-    
-
+    padding: 1.1rem 0;
 }
 
 .double {
-    width: 180px;
+    width: 135px;
     border-radius: 40px;
+    text-align: left;
+    padding-left: 25px;
 }
 
 .operator {
     background-color: orange;
-    text
+    font-size: 2.1rem;
+    
 }
 
 .grey {
-    background-color: grey;
+    color: black;
 }
