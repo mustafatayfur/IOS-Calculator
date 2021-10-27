@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+#container {
+    background-color: black;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    width: 400px;
+    height: 800px;
+}
+
+.result {
+    height: 200px;
+}
+
+span {
+
+    text-align: center;
+    color: white;
+    background-color: grey;
+    margin: 5px;
+    width: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1.5rem 0;
+    
+
+}
+
+.double {
+    width: 180px;
+    border-radius: 40px;
+}
+
+.operator {
+    background-color: orange;
+    text
+}
+
+.grey {
+    background-color: grey;
+}
