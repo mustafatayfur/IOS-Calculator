@@ -36,9 +36,9 @@ let haveDot = false;
 
 numbersEl.forEach( number => {
   number.addEventListener('click', (e)=>{
-    if(e.target.innerText === '.' && !haveDot){
+    if(e.target.innerText === ',' && !haveDot){
       haveDot = true;
-    } else if (e.target.innerText === '.' && haveDot){
+    } else if (e.target.innerText === ',' && haveDot){
       return;
     }
     dis2Num += e.target.innerText;
@@ -56,17 +56,18 @@ operationEl.forEach( operation => {
       mathOperation();
 
     }else{
-      result = parseFloat(dis2Num);
+    //   result = parseFloat(dis2Num);
+        result = dis2Num;
     }
     clearVar(operationName);
     lastOperation = operationName;
-    console.log(result)
+    console.log(result);
   })
 });
 function clearVar(name = ''){
   dis1Num += dis2Num + ' ' + name + ' ';
   display1El.innerText = dis1Num;
-  display2El.innerText = '';
+  display2El.innerText = result;      //**************** */
   dis2Num = '';
   tempResultEl.innerText = result;
 }
@@ -80,7 +81,7 @@ function mathOperation() {
     result = parseFloat(result) - parseFloat(dis2Num);
   } else if (lastOperation === '/') {
     result = parseFloat(result) / parseFloat(dis2Num);
-  }else if( lastOperation === '%'){
+  }else if(lastOperation === '%'){
     result = parseFloat(result) % parseFloat(dis2Num);
   }
 }
@@ -91,7 +92,7 @@ equalEl.addEventListener('click', ()=> {
   haveDot = false;
   mathOperation();
   clearVar();
-  display2El.innerText = result;
+  display2El.innerText = result;         //************** */
   tempResultEl.innerText = '';
   dis2Num = result;
   dis1Num = '';
@@ -107,8 +108,8 @@ clearAllEl.addEventListener('click', ()=>{
 });
 
 clearLastEl.addEventListener('click', () => {
-  display2El.innerText = '';
   dis2Num= '';
+  display2El.innerText = display2El.innerText.toString().slice(0, -1)
 });
 
 window.addEventListener('keydown', (e)=>{
@@ -123,7 +124,7 @@ window.addEventListener('keydown', (e)=>{
     e.key === '7' ||
     e.key === '8' ||
     e.key === '9' ||
-    e.key === '.' 
+    e.key === ',' 
   ){
     clickButtonEl(e.key)
     // console.log(e.key)
