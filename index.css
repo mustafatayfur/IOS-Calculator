@@ -35,6 +35,7 @@
     position: relative;
   }
   .display-1{
+      color: white;
     opacity: 0.5;
     padding-top: 30px ;
     font-size: 30px;
@@ -79,8 +80,15 @@
   .button:hover{
     opacity: 0.5;
   }
+  .number{
+    background-color: rgb(65, 65, 65);
+  }
+
   .operation{
       background-color: orange;
+  }
+  .modulus, .all-clear, .last-entity-clear {
+    background-color: rgb(122, 122, 122);
   }
 
   .btn-0{
