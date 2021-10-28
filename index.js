@@ -56,7 +56,7 @@ operationEl.forEach( operation => {
       mathOperation();
 
     }else{
-    //   result = parseFloat(dis2Num);
+    //   result = parseFloat(dis2Num);    //******** */
         result = dis2Num;
     }
     clearVar(operationName);
