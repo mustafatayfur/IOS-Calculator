@@ -69,7 +69,7 @@ function clearVar(name = ''){
   display1El.innerText = dis1Num;
   display2El.innerText = result;      //**************** */
   dis2Num = '';
-  tempResultEl.innerText = result;
+//   tempResultEl.innerText = result;
 }
 
 function mathOperation() {
@@ -92,7 +92,7 @@ equalEl.addEventListener('click', ()=> {
   haveDot = false;
   mathOperation();
   clearVar();
-  display2El.innerText = result;         //************** */
+  display2El.innerText = result;      
   tempResultEl.innerText = '';
   dis2Num = result;
   dis1Num = '';
@@ -108,8 +108,8 @@ clearAllEl.addEventListener('click', ()=>{
 });
 
 clearLastEl.addEventListener('click', () => {
+  display2El.innerText = display2El.innerText.toString().slice(0, -1);
   dis2Num= '';
-  display2El.innerText = display2El.innerText.toString().slice(0, -1)
 });
 
 window.addEventListener('keydown', (e)=>{

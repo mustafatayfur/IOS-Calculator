@@ -2,12 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid white; */
   }
   html{
     font-family: 'Montserrat', sans-serif;
   }
   section{
-    
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -92,7 +92,8 @@
 
   .btn-0{
     width: 170px;
-    border-radius: 30px;
+    border-radius: 40px;
+    padding-right: 90px;
  }
 
  @media only screen and (max-width: 420px) {
@@ -107,7 +108,7 @@
     }
     .btn-0{
         width: 130px;
-        border-radius: 30px;
+        border-radius: 40px;
      }
   }
 
