@@ -1,25 +1,4 @@
-// const numberButton =  document.querySelector(".button number");
-// const clearButton = document.querySelector(".clear grey");
-// const plusMinus = document.querySelector(".grey");
-// const deleteButton = document.querySelector(".icon grey");
-// const operators = document.querySelector(".operator");
-// const divideOperand = document.querySelector(".divide");
-// const multipleOperand = document.querySelector(".multiple");
-// const minusOperand = document.querySelector(".minus");
-// const plusOperand = document.querySelector(".plus");
-// const equalOperand = document.querySelector(".equal");
-// const commaButton = document.querySelector(".comma");
-// const output1 = document.querySelector(".result1");
-// const output2 = document.querySelector(".result2");
-// const button = document.getElementsByTagName("button")
-// const displayButton =Array.from(document.getElementsByClassName("number"));
 
-
-// displayButton.map(button => {
-//     button.addEventlistener('click',(e) => {
-//         switch(e.target.innerText){
-//             case 'AC':
-//                 output1.innerText = '';
 const display1El = document.querySelector('.display-1');
 const display2El = document.querySelector('.display-2');
 const tempResultEl = document.querySelector('.temp-result'); 
@@ -28,6 +7,9 @@ const operationEl = document.querySelectorAll('.operation');
 const equalEl = document.querySelector('.equal');
 const clearAllEl = document.querySelector('.all-clear');
 const clearLastEl = document.querySelector('.last-entity-clear');
+
+      
+
 let dis1Num = '';
 let dis2Num = '';
 let result = null;
@@ -36,15 +18,17 @@ let haveDot = false;
 
 numbersEl.forEach( number => {
   number.addEventListener('click', (e)=>{
-    if(e.target.innerText === ',' && !haveDot){
+    if(e.target.innerText === '.'&& !haveDot){
       haveDot = true;
-    } else if (e.target.innerText === ',' && haveDot){
+      
+    } else if (e.target.innerText === '.'&& haveDot){
       return;
     }
     dis2Num += e.target.innerText;
     display2El.innerText = dis2Num;
-    // console.log();
+   // console.log();
   })
+  
 })
 
 operationEl.forEach( operation => {
@@ -54,9 +38,8 @@ operationEl.forEach( operation => {
     const operationName = e.target.innerText;
     if (dis1Num && dis2Num && lastOperation){
       mathOperation();
-
     }else{
-    //   result = parseFloat(dis2Num);    //******** */
+    //  result = parseFloat(dis2Num);    //******** */
         result = dis2Num;
     }
     clearVar(operationName);
@@ -65,14 +48,14 @@ operationEl.forEach( operation => {
   })
 });
 function clearVar(name = ''){
-  dis1Num += dis2Num + ' ' + name + ' ';
+  dis1Num += dis2Num + ' ' + name + ' ';87
   display1El.innerText = dis1Num;
   display2El.innerText = result;      //**************** */
   dis2Num = '';
 //   tempResultEl.innerText = result;
 }
-
 function mathOperation() {
+  
   if (lastOperation === 'x') {
     result = parseFloat(result) * parseFloat(dis2Num);
   } else if (lastOperation === '+') {
@@ -124,7 +107,7 @@ window.addEventListener('keydown', (e)=>{
     e.key === '7' ||
     e.key === '8' ||
     e.key === '9' ||
-    e.key === ',' 
+    e.key === '.' 
   ){
     clickButtonEl(e.key)
     // console.log(e.key)
