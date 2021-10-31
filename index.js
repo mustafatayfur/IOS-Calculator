@@ -8,8 +8,6 @@ const equalEl = document.querySelector('.equal');
 const clearAllEl = document.querySelector('.all-clear');
 const clearLastEl = document.querySelector('.last-entity-clear');
 
-      
-
 let dis1Num = '';
 let dis2Num = '';
 let result = null;
@@ -20,7 +18,6 @@ numbersEl.forEach( number => {
   number.addEventListener('click', (e)=>{
     if(e.target.innerText === '.'&& !haveDot){
       haveDot = true;
-      
     } else if (e.target.innerText === '.'&& haveDot){
       return;
     }
@@ -28,8 +25,7 @@ numbersEl.forEach( number => {
     display2El.innerText = dis2Num;
    // console.log();
   })
-  
-})
+});
 
 operationEl.forEach( operation => {
   operation.addEventListener('click', (e)=> {
@@ -39,7 +35,7 @@ operationEl.forEach( operation => {
     if (dis1Num && dis2Num && lastOperation){
       mathOperation();
     }else{
-    //  result = parseFloat(dis2Num);    //******** */
+    //  result = parseFloat(dis2Num); 
         result = dis2Num;
     }
     clearVar(operationName);
@@ -48,9 +44,9 @@ operationEl.forEach( operation => {
   })
 });
 function clearVar(name = ''){
-  dis1Num += dis2Num + ' ' + name + ' ';87
+  dis1Num += dis2Num + ' ' + name + ' ';
   display1El.innerText = dis1Num;
-  display2El.innerText = result;      //**************** */
+  display2El.innerText = result;  
   dis2Num = '';
 //   tempResultEl.innerText = result;
 }
@@ -110,7 +106,6 @@ window.addEventListener('keydown', (e)=>{
     e.key === '.' 
   ){
     clickButtonEl(e.key)
-    // console.log(e.key)
   }else if(
     e.key === '+' ||
     e.key === '-' ||
